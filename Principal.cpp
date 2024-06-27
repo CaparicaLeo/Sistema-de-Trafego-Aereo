@@ -5,6 +5,8 @@
 #include <iomanip> // Para a formatação da Tabela
 #include <cstdlib> // Para a função rand()
 #include <ctime>   // Para a função time()
+#include <unistd.h>
+#define QNTVOOS 10
 
 using namespace std;
 
@@ -85,6 +87,7 @@ void menu()
             break;
         }
     } while (escolha != 3);
+    sleep(3);
 }
 
 Voo inicializaVoo(int num)
@@ -120,7 +123,7 @@ void mostraVoo(queue<Voo> filaEntrada)
 
 void inicializarFilaEntrada()
 {
-    for (int i = 0; i < 50; i++)
+    for (int i = 0; i < QNTVOOS; i++)
     {
         filaEntrada.push(inicializaVoo(i + 1));
     }
@@ -129,7 +132,6 @@ void inicializarFilaEntrada()
 
 void simularControleTrafego()
 {
-    system("cls");
     int tempo = 0;
     bool todasLivres = false;
 
