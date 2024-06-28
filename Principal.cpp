@@ -6,7 +6,7 @@
 #include <cstdlib> // Para a função rand()
 #include <ctime>   // Para a função time()
 #include <unistd.h>
-#define QNTVOOS 10
+#define QNTVOOS 50
 
 using namespace std;
 
